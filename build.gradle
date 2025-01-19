@@ -9,8 +9,8 @@ version = mod_version
 java {
 	withSourcesJar()
 	archivesBaseName = mod_id + "-fabric"
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 loom {
@@ -24,7 +24,7 @@ loom {
 repositories {
 	maven { url = "https://maven.fabricmc.net/" } // FAPI, Loader
 	maven { url = "https://maven.quiltmc.org/repository/release" } // QM
-	maven { url = "https://maven.parchmentmc.org" } // Parchment
+//	maven { url = "https://maven.parchmentmc.org" } // Parchment
 	maven { url = "https://mvn.devos.one/snapshots/" } // Registrate, Porting Lib, Forge Tags, Milk Lib
 	maven { url = "https://jitpack.io/" } // for Porting Lib: Mixin Extras, Fabric ASM
 }
@@ -33,7 +33,7 @@ dependencies {
 	minecraft "com.mojang:minecraft:${minecraft_version}"
 	mappings(loom.layered {
 		it.mappings("org.quiltmc:quilt-mappings:${quilt_version}:intermediary-v2")
-		it.parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
+		it.mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 		it.officialMojangMappings { nameSyntheticMembers = false }
 	})
 	modImplementation "net.fabricmc:fabric-loader:${loader_version}"
@@ -45,10 +45,11 @@ processResources {
 	inputs.property "version", mod_version
 	inputs.property "license", mod_license
 	inputs.property "group_id", mod_group_id
+	inputs.property "original_author", mod_original_authors
 	inputs.property "author", mod_authors
 	inputs.property "description", mod_description
 
 	filesMatching("fabric.mod.json") {
-		expand "id": mod_id, "name": mod_name, "version": mod_version, "license": mod_license, "group_id": mod_group_id, "author": mod_authors, "description": mod_description
+		expand "id": mod_id, "name": mod_name, "version": mod_version, "license": mod_license, "group_id": mod_group_id, "original_author": mod_original_authors, "author": mod_authors, "description": mod_description
 	}
 }

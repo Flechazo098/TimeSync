@@ -4,6 +4,9 @@
 	"version": "${version}",
 	"name": "${name}",
 	"description": "${description}",
+	"original_authors": [
+		"${original_author}"
+	],
 	"authors": [
 		"${author}"
 	],
@@ -19,9 +22,9 @@
 		"${id}.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14.21",
+		"fabricloader": ">=0.16.10",
 		"minecraft": ">=1.14",
-		"java": ">=17"
+		"java": ">=21"
 	},
 	"suggests": {
 		"another-mod": "*"
