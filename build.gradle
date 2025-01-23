@@ -45,11 +45,10 @@ processResources {
 	inputs.property "version", mod_version
 	inputs.property "license", mod_license
 	inputs.property "group_id", mod_group_id
-	inputs.property "original_author", mod_original_authors
 	inputs.property "author", mod_authors
 	inputs.property "description", mod_description
 
 	filesMatching("fabric.mod.json") {
-		expand "id": mod_id, "name": mod_name, "version": mod_version, "license": mod_license, "group_id": mod_group_id, "original_author": mod_original_authors, "author": mod_authors, "description": mod_description
+		expand "id": mod_id, "name": mod_name, "version": mod_version, "license": mod_license, "group_id": mod_group_id, "author": mod_authors, "description": mod_description
 	}
 }

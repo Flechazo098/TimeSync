@@ -4,9 +4,6 @@
 	"version": "${version}",
 	"name": "${name}",
 	"description": "${description}",
-	"original_authors": [
-		"${original_author}"
-	],
 	"authors": [
 		"${author}"
 	],
