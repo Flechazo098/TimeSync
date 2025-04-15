@@ -2,7 +2,6 @@ package be.cloudns.edebe.timesync.fabric.util;
 
 import java.time.LocalTime;
 import java.time.ZoneId;
-import java.time.ZonedDateTime;
 
 public final class TimeUtil {
 
