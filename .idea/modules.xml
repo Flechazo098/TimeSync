@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TimeSync.main.iml" filepath="$PROJECT_DIR$/.idea/modules/TimeSync.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TimeSync.test.iml" filepath="$PROJECT_DIR$/.idea/modules/TimeSync.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/be.cloudns.edebe.timesync.fabric.TimeSync.main.iml" filepath="$PROJECT_DIR$/.idea/modules/be.cloudns.edebe.timesync.fabric.TimeSync.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/be.cloudns.edebe.timesync.fabric.TimeSync.test.iml" filepath="$PROJECT_DIR$/.idea/modules/be.cloudns.edebe.timesync.fabric.TimeSync.test.iml" />
     </modules>
   </component>
 </project>

@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "be.cloudns.edebe.timesync.fabric.mixin",
+  "package": "be.cloudns.edebe.timesync.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "PrimaryLevelDataMixin"
