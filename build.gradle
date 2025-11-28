@@ -23,13 +23,22 @@ loom {
 
 repositories {
 	maven { url = "https://maven.fabricmc.net/" } // FAPI, Loader
+	maven {
+		// Add curse maven to repositories
+		name = "Curse Maven"
+		url = "https://www.cursemaven.com"
+		content {
+			includeGroup "curse.maven"
+		}
+	}
 }
 
 dependencies {
 	minecraft "com.mojang:minecraft:${minecraft_version}"
 	mappings loom.officialMojangMappings()
 	modImplementation "net.fabricmc:fabric-loader:${loader_version}"
-
+	modImplementation "curse.maven:minihud-244260:7130843"
+	modImplementation "curse.maven:malilib-303119:7130809"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
 

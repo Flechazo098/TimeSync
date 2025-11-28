@@ -14,7 +14,11 @@
 	"license": "${license}",
 	"icon": "icon.png",
 	"environment": "*",
-	"entrypoints": {},
+	"entrypoints": {
+		"main": [
+			"be.cloudns.edebe.timesync.TImeSync"
+		]
+	},
 	"mixins": [
 		"timesync.mixins.json"
 	],
